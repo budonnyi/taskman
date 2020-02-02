@@ -74,16 +74,16 @@ include(ROOT . '/views/layouts/header.php');
             <div class="form-row">
                 <div class="col-2">
                     <input id="user" name="user" type="text" class="form-control" placeholder="Имя пользователя"
-                           value="<?= $_POST['user'] ?? '' ?>">
+                           value="<?= isset($_POST['user']) ? $_POST['user'] : '' ?>">
                 </div>
                 <div class="col-2">
                     <input id="email" name="email" type="text" class="form-control" placeholder="e-mail"
-                           value="<?= $_POST['email'] ?? '' ?>">
+                           value="<?= isset($_POST['email']) ? $_POST['email'] : '' ?>">
                 </div>
                 <div class="col">
                     <input id="description" name="description" type="text" class="form-control"
                            placeholder="Текст задачи"
-                           value="<?= $_POST['description'] ?? '' ?>">
+                           value="<?= isset($_POST['description']) ? $_POST['description'] : '' ?>">
                 </div>
                 <div class="col-auto">
                     <button id="send" type="submit" class="btn btn-primary mb-2">Добавить</button>
