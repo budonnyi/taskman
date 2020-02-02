@@ -106,7 +106,17 @@ include(ROOT . '/views/layouts/header.php');
     //check email on user side
     function validate(form_id, email) {
         var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-        var address = document.forms[form_id].elements[email].value;
+        var user = $("#user").val();
+        var description = $("#description").val();
+        var address = $("#email").val();
+
+        console.log(user+address+description);
+
+        if(address === '' || description === '' || user === '') {
+            alert('Необходимо заполнить эвсе поля!');
+            return false;
+        }
+
         if (reg.test(address) == false) {
             alert('Введите корректный e-mail');
             return false;
