@@ -1,0 +1,16 @@
+body {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.table tbody > tr > td.vert-align {
+    vertical-align: middle;
+}
+
+.margines {
+    margin: 25px 0px;
+}
+
+.hidden {
+    visibility: hidden;
+}
